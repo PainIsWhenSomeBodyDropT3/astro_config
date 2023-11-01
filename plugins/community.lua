@@ -5,5 +5,6 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.docker" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
