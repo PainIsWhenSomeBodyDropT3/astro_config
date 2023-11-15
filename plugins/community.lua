@@ -6,5 +6,5 @@ return {
 
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.bash" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.pack.docker" },
 }
