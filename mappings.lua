@@ -7,11 +7,22 @@ return {
   -- first key is the mode
   v = {
     ["<leader>p"] = '"_dP',
+    ["J"] = ":m '>+1<CR>gv=gv",
+    ["K"] = ":m '<-2<CR>gv=gv",
+    ["<leader>y"] = '"+y',
   },
 
   n = {
     -- second key is the lefthand side of the map
-
+    ["<leader>s"] = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
+    ["<leader>x"] = "<cmd>!chmod +x %<CR>",
+    ["J"] = "mzJ`z",
+    ["<C-d>"] = "<C-d>zz",
+    ["<C-u>"] = "<C-u>zz",
+    ["n"] = "nzzzv",
+    ["N"] = "Nzzzv",
+    ["<leader>y"] = '"+y',
+    ["<leader>Y"] = '"+Y',
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
