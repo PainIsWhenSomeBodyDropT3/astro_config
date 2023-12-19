@@ -17,7 +17,10 @@ return {
     ["<leader>gaj"] = { "<cmd>GoAddTag json<cr>", desc = "Add json to Go structure" },
     ["<leader>grj"] = { "<cmd>GoRmTag json<cr>", desc = "Remove json from Go structure" },
 
-    ["<leader>r"] = { "<cmd>!go run main.go<cr>", desc = "Run main.go" },
+    ["<leader>r"] = { "<cmd>!go run .<cr>", desc = "Run main.go" },
+    ["<leader>t"] = { "<cmd>!go test<cr>", desc = "Run testing" },
+    ["<leader>i"] = { "<cmd>GoIfErr<cr>", desc = "If err" },
+    ["<leader>bm"] = { "<cmd>!go test -bench=. -benchmem<cr>", desc = "Benchmark" },
 
     ["<leader>s"] = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
 
