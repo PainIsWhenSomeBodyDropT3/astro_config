@@ -20,7 +20,13 @@ return {
     ["<leader>r"] = { "<cmd>!go run .<cr>", desc = "Run main.go" },
     ["<leader>t"] = { "<cmd>!go test<cr>", desc = "Run testing" },
     ["<leader>i"] = { "<cmd>GoIfErr<cr>", desc = "If err" },
-    ["<leader>bm"] = { "<cmd>!go test -bench=. -benchmem<cr>", desc = "Benchmark" },
+    ["<leader>bm"] = { "<cmd>!go test -bench=. -benchmem -run=^# -benchtime=10s<cr>", desc = "Benchmark" },
+    ["<leader>pr"] = {
+      "<cmd>!go test -bench=. -benchmem -run=^# -memprofile mem.pprof -cpuprofile cpu.pprof -benchtime=10s<cr>",
+      desc = "Profilings",
+    },
+    ["<leader>prc"] = { "<cmd>!go tool pprof -http=:8080 cpu.pprof <cr>", desc = "Cpu prof in web" },
+    ["<leader>prm"] = { "<cmd>!go tool pprof -http=:8080 mem.pprof <cr>", desc = "Mem prof in web" },
 
     ["<leader>s"] = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
 
